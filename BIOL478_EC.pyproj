@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>BIOL478_EC</Name>
     <RootNamespace>BIOL478_EC</RootNamespace>
+    <InterpreterId>Global|PythonCore|3.12</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BIOL478_EC.py" />
+    <Compile Include="algo.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|env" />
+    <InterpreterReference Include="Global|PythonCore|3.12" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BLOSUM62.txt" />
+    <Content Include="protein_sequence.fasta" />
+    <Content Include="dna_sequence.fasta" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
